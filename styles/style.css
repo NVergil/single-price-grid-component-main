@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+  /* ## Layout */
+  
+  /* ## Colors */
+  
+  /* ### Primary */
+  
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-300: #4abebd;
+  --bright-yellow: hsl(71, 73%, 54%);
+  
+  /* ### Neutral */
+  
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  
+  /* ## Typography */
+  
+  /* ### Body Copy */
+  
+  --size: 16px;
+  
+  /* ### Font */
+  /* - Weights: 400, 700 */
+  
+  --font-karla: 'Karla', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  padding: 2rem;
+  background: var(--light-gray);
+  font-family: var(--font-karla);
+}
+
+.container {
+  max-width: 635px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 10px 10px 45px -13px var(--grayish-blue);
+}
+
+.community {
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+  padding: 2.5rem;
+}
+
+.community h1 {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.community h2 {
+  font-size: 1.125rem;
+  color: var(--bright-yellow);
+  margin: 1rem 0;
+}
+.community p {
+  font-size: var(--size);
+  font-weight: 400;
+  color: var(--grayish-blue);
+  line-height: 1.6;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+}
+.sub-pr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .875rem;
+  margin: 1rem 0 .5rem;
+}
+.subscription {
+  flex: 1;
+  background: var(--cyan);
+  padding: 2.5rem;
+  color: white;
+  border-bottom-left-radius: 8px;
+}
+.subscription h2 {
+  font-size: 1.125rem;
+}
+.per-month {
+  color: var(--light-gray);
+  font-size: 15px;
+}
+.subscription .price {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+}
+button {
+  margin: 1.95rem 0 0;
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--bright-yellow);
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: white;
+  font-family: var(--font-karla);
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.75);
+}
+
+.why-us {
+  flex: 1;
+  background: var(--cyan-300);
+  padding: 2.5rem;
+  border-bottom-right-radius: 8px;
+}
+
+.why-us h2 {
+  font-size: 1.125rem;
+  color: white;
+}
+
+.why-us p {
+  font-size: 13.5px;
+  color: var(--light-gray);
+  max-width: 200px;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 580px) {
+  .community {
+    padding: 2rem 1.5rem;
+  }
+  .community h1 {
+    font-size: 1.25rem;
+  }
+  .community h2 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  .community p {
+    font-size: 14px;
+    margin-top: 1.250rem;
+    line-height: 1.8;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .subscription {
+    border-radius: 0;
+    padding: 1.5rem;
+  }
+  .why-us {
+    border-radius: 0 0 8px 8px;
+    padding: 1.5rem;
+  }
+}
